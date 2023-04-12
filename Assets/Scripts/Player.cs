@@ -4,18 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour, IKitchenObejctParent {
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private LayerMask countersLayerMask;
+    [SerializeField] private Transform kitchenObjectHoldPoint;
+
     public static Player Instance { get; private set; }
 
     private bool isWalking;
+    private Vector3 lastIntereactDir;
+    private ClearCounter selectedCounter;
+    private KitchenObject kitchenObject;
+
     public bool IsWalking() {
         return isWalking;
     }
-    private Vector3 lastIntereactDir;
-    private ClearCounter selectedCounter;
 
     private void Awake() {
         if (Instance != null) Debug.LogError("There is more than one player instance!");
@@ -27,7 +31,7 @@ public class Player : MonoBehaviour {
         gameInput.OnInteractAction += GameInput_OnInteractAction;
     }
     private void GameInput_OnInteractAction(object sender, System.EventArgs e) {
-        selectedCounter?.Interact();
+        selectedCounter?.Interact(this);
     }
     private void HandleMovement() {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
@@ -88,5 +92,25 @@ public class Player : MonoBehaviour {
     private void Update() {
         HandleMovement();
         HandleInteractions();
+    }
+
+    public Transform GetKitchenObjectFollowTransform() {
+        return kitchenObjectHoldPoint;
+    }
+
+    public void SetKitchenObject(KitchenObject kitchenObject) {
+        this.kitchenObject = kitchenObject;
+    }
+
+    public KitchenObject GetKitchenObject() {
+        return kitchenObject;
+    }
+
+    public void ClearKitchenObject() {
+        this.kitchenObject = null;
+    }
+
+    public bool HasKitchenObject() {
+        return kitchenObject != null;
     }
 }
