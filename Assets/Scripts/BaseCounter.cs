@@ -24,7 +24,7 @@ public class BaseCounter : MonoBehaviour, IKitchenObejctParent {
     }
 
     public void ClearKitchenObject() {
-        this.kitchenObject = null;
+        kitchenObject = null;
     }
 
     public bool HasKitchenObject() {
