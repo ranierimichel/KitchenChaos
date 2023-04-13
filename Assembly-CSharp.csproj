@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SelectedCounterVisual.cs" />
+    <Compile Include="Assets\Scripts\ProgressBarUI.cs" />
     <Compile Include="Assets\Scripts\ContainerCounter.cs" />
     <Compile Include="Assets\Scripts\KitchenObjectSO.cs" />
     <Compile Include="Assets\Scripts\IKitchenObejctParent.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\BaseCounter.cs" />
     <Compile Include="Assets\Scripts\CuttingCounter.cs" />
     <Compile Include="Assets\Scripts\CuttingRecipeSO.cs" />
+    <Compile Include="Assets\Scripts\CuttingCounterVisual.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

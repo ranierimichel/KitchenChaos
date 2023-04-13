@@ -1353,6 +1353,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e303ee8ed0e5b984e939d122d3fc2d6c,
         type: 2}
+    - target: {fileID: 3459282486796788299, guid: 1024b74f6b787d7429f71b306cf6ff3d,
+        type: 3}
+      propertyPath: cuttingRecipeSOArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459282486796788299, guid: 1024b74f6b787d7429f71b306cf6ff3d,
+        type: 3}
+      propertyPath: cuttingRecipeSOArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 37edf7427bef9104e8515e72cb36baa5,
+        type: 2}
+    - target: {fileID: 3459282486796788299, guid: 1024b74f6b787d7429f71b306cf6ff3d,
+        type: 3}
+      propertyPath: cuttingRecipeSOArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f2d5aeb600e4b6643877ef99eb2f7c36,
+        type: 2}
+    - target: {fileID: 3459282486796788299, guid: 1024b74f6b787d7429f71b306cf6ff3d,
+        type: 3}
+      propertyPath: cuttingRecipeSOArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: b0a588b790daa854399c9e695ca9e2fa,
+        type: 2}
     - target: {fileID: 7117011978462989638, guid: 1024b74f6b787d7429f71b306cf6ff3d,
         type: 3}
       propertyPath: m_Name
