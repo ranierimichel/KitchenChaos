@@ -16,4 +16,7 @@ public class ContainerCounter : BaseCounter {
             OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
         }
     }
+
+    public override void InteractAlternate(Player player) {
+    }
 }
