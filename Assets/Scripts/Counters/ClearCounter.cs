@@ -22,7 +22,4 @@ public class ClearCounter : BaseCounter {
             }
         }
     }
-
-    public override void InteractAlternate(Player player) {
-    }
 }
