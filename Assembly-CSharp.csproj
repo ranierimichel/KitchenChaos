@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\ContainerCounter.cs" />
     <Compile Include="Assets\Scripts\KitchenObjectSO.cs" />
     <Compile Include="Assets\Scripts\IKitchenObejctParent.cs" />
+    <Compile Include="Assets\Scripts\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
     <Compile Include="Assets\PlayerInputActions.cs" />
