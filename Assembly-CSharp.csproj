@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Counters\TrashCounter.cs" />
     <Compile Include="Assets\Scripts\Counters\SelectedCounterVisual.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\BurningRecipeSO.cs" />
+    <Compile Include="Assets\Scripts\PlateCompletVisual.cs" />
     <Compile Include="Assets\Scripts\PlateKitchenObject.cs" />
     <Compile Include="Assets\Scripts\IKitchenObejctParent.cs" />
     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
