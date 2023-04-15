@@ -58,10 +58,12 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.12f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Counters\DeliveryCounter.cs" />
     <Compile Include="Assets\Scripts\PlateIconSigleUI.cs" />
     <Compile Include="Assets\Scripts\Counters\BaseCounter.cs" />
     <Compile Include="Assets\Scripts\Counters\ContainerCounterVisual.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CuttingRecipeSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\RecipeListSO.cs" />
     <Compile Include="Assets\Scripts\ProgressBarUI.cs" />
     <Compile Include="Assets\Scripts\IHasProgress.cs" />
     <Compile Include="Assets\Scripts\Counters\TrashCounter.cs" />
@@ -85,8 +87,9 @@
     <Compile Include="Assets\Scripts\Counters\PlatesCounter.cs" />
     <Compile Include="Assets\Scripts\GameInput.cs" />
     <Compile Include="Assets\Scripts\KitchenObject.cs" />
+    <Compile Include="Assets\Scripts\DeliveryManager.cs" />
     <Compile Include="Assets\Scripts\Counters\PlatesCounterVisual.cs" />
-    <Compile Include="Assets\Scripts\DeliveryCounter.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\RecipeSO.cs" />
     <Compile Include="Assets\Scripts\Counters\CuttingCounterVisual.cs" />
   </ItemGroup>
   <ItemGroup>
