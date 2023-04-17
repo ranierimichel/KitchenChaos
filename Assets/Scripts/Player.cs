@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class Player : MonoBehaviour, IKitchenObejctParent {
 
@@ -40,15 +39,23 @@ public class Player : MonoBehaviour, IKitchenObejctParent {
     }
 
     private void GameInput_OnInteractAlternateAction(object sender, EventArgs e) {
-        selectedCounter?.InteractAlternate(this);
+        if (!KitchenGameManager.Instance.IsGamePlaying()) return;
+
+        if (selectedCounter != null) {
+            selectedCounter.InteractAlternate(this);
+        }
     }
 
     private void GameInput_OnInteractAction(object sender, System.EventArgs e) {
-        selectedCounter?.Interact(this);
+        if (!KitchenGameManager.Instance.IsGamePlaying()) return;
+
+        if (selectedCounter != null) {
+            selectedCounter.Interact(this);
+        }
     }
     private void HandleMovement() {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
-        Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        Vector3 moveDir = new(inputVector.x, 0f, inputVector.y);
         float moveDistance = moveSpeed * Time.deltaTime;
         float playerRadius = .7f;
         float playerHeight = 2f;
@@ -71,7 +78,7 @@ public class Player : MonoBehaviour, IKitchenObejctParent {
                 if (canMove) moveDir = moveDirZ;
             }
         }
-        if (canMove) transform.position += moveDir * moveSpeed * Time.deltaTime;
+        if (canMove) transform.position += moveSpeed * Time.deltaTime * moveDir;
 
         isWalking = moveDir != Vector3.zero;
         if (isWalking) transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
@@ -88,7 +95,7 @@ public class Player : MonoBehaviour, IKitchenObejctParent {
     private void HandleInteractions() {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
-        Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+        Vector3 moveDir = new(inputVector.x, 0, inputVector.y);
 
         if (moveDir != Vector3.zero) lastIntereactDir = moveDir;
 
