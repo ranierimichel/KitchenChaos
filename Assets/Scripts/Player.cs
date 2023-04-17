@@ -5,6 +5,13 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class Player : MonoBehaviour, IKitchenObejctParent {
+
+    public event EventHandler OnPickedSomething;
+    public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
+    public class OnSelectedCounterChangedEventArgs : EventArgs {
+        public BaseCounter selectedCounter;
+    }
+
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private LayerMask countersLayerMask;
@@ -70,10 +77,7 @@ public class Player : MonoBehaviour, IKitchenObejctParent {
         if (isWalking) transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
     }
 
-    public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
-    public class OnSelectedCounterChangedEventArgs : EventArgs {
-        public BaseCounter selectedCounter;
-    }
+
     private void SetSelectedCounter(BaseCounter selectedCounter) {
         this.selectedCounter = selectedCounter;
 
@@ -106,6 +110,9 @@ public class Player : MonoBehaviour, IKitchenObejctParent {
 
     public void SetKitchenObject(KitchenObject kitchenObject) {
         this.kitchenObject = kitchenObject;
+        if (kitchenObject != null) {
+            OnPickedSomething?.Invoke(this, EventArgs.Empty);
+        }
     }
 
     public KitchenObject GetKitchenObject() {
