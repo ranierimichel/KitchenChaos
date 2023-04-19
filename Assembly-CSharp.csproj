@@ -58,15 +58,16 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.12f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\UI\GamePausedUI.cs" />
+    <Compile Include="Assets\Scripts\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Counters\DeliveryCounter.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\OptionsUI.cs" />
     <Compile Include="Assets\Scripts\UI\DeliveryManagerSingleUI.cs" />
     <Compile Include="Assets\Scripts\Counters\BaseCounter.cs" />
     <Compile Include="Assets\Scripts\Counters\ContainerCounterVisual.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CuttingRecipeSO.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\RecipeListSO.cs" />
     <Compile Include="Assets\Scripts\ResetStaticDataManager.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\RecipeListSO.cs" />
     <Compile Include="Assets\Scripts\LoaderCallback.cs" />
     <Compile Include="Assets\Scripts\IHasProgress.cs" />
     <Compile Include="Assets\Scripts\Counters\TrashCounter.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Assets\Scripts\UI\DeliveryManagerUI.cs" />
     <Compile Include="Assets\Scripts\UI\ProgressBarUI.cs" />
     <Compile Include="Assets\Scripts\KitchenGameManager.cs" />
+    <Compile Include="Assets\Scripts\UI\GamePausedUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
