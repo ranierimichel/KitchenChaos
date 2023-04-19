@@ -61,7 +61,6 @@
     <Compile Include="Assets\Scripts\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Counters\DeliveryCounter.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuUI.cs" />
-    <Compile Include="Assets\Scripts\OptionsUI.cs" />
     <Compile Include="Assets\Scripts\UI\DeliveryManagerSingleUI.cs" />
     <Compile Include="Assets\Scripts\Counters\BaseCounter.cs" />
     <Compile Include="Assets\Scripts\Counters\ContainerCounterVisual.cs" />
@@ -89,6 +88,7 @@
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
     <Compile Include="Assets\Scripts\Counters\ContainerCounter.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FryingRecipeSO.cs" />
+    <Compile Include="Assets\Scripts\UI\OptionsUI.cs" />
     <Compile Include="Assets\Scripts\Counters\StoveCounterVisual.cs" />
     <Compile Include="Assets\Scripts\Counters\CuttingCounter.cs" />
     <Compile Include="Assets\Scripts\UI\PlateIconSigleUI.cs" />
