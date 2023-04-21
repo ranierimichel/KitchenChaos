@@ -138,11 +138,11 @@ public class StoveCounter : BaseCounter, IHasProgress {
         return fryingRecipeSO != null;
     }
 
-    private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO) {
-        FryingRecipeSO fryingRecipeSO = GetFryingRecipeSOWithInput(inputKitchenObjectSO);
+    //private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO) {
+    //    FryingRecipeSO fryingRecipeSO = GetFryingRecipeSOWithInput(inputKitchenObjectSO);
 
-        return fryingRecipeSO != null ? fryingRecipeSO.output : null;
-    }
+    //    return fryingRecipeSO != null ? fryingRecipeSO.output : null;
+    //}
 
     private FryingRecipeSO GetFryingRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO) {
         foreach (FryingRecipeSO fryingRecipeSO in fryingRecipeSOArray) {
@@ -160,6 +160,10 @@ public class StoveCounter : BaseCounter, IHasProgress {
             }
         }
         return null;
+    }
+
+    public bool IsFried() {
+        return state == State.Fried;
     }
 
 }
